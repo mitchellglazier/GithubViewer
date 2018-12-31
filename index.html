@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="githubViewer">
+
+  <head>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="script.ts"></script>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="system.config.js"></script>
+    <script data-require="angular.js@*" data-semver="4.0.0" src="tsconfig.json"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <h1>{{message}}</h1>
+    
+    <div>
+      {{ error }}
+    </div>
+    
+    <div>
+      <div>
+        Coder: {{user.name}}
+      </div>
+      <div>
+        Location: {{user.location}}
+      </div>
+      <div>
+        <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
+      </div>
+    </div>
+    
+  </body>
+
+</html>

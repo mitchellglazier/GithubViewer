@@ -11,7 +11,7 @@
     };
 
     var onRepos = function(response){
-
+      
       $scope.repos = response.data;
 
     };
@@ -25,7 +25,7 @@
       .then(onUserComplete, onError);
     };
 
-    $scope.username = "angular";
+    $scope.username = "";
     $scope.message = "Github Viewer!";
     $scope.repoSortOrder = "-stargazers_count";
 

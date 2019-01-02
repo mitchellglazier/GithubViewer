@@ -15,47 +15,12 @@
 
   <div>{{ error }}</div>
 
-  <form name="searchUser"ng-submit="search(username)">
-    <input type="search" required placeholder="Enter a github username" ng-model="username" />
+  <form name="searchUser" ng-submit="search(username)">
+    <input type="search" required placeholder="Github username" ng-model="username" />
     <input type="submit" value="Search">
   </form>
 
-  <div>
-    <div>
-      Coder: {{user.name}}
-    </div>
-    <div>
-      Location: {{user.location}}
-    </div>
-    <div>
-      <img ng-src="{{user.avatar_url}}" title="{{user.name}}">
-    </div>
-  </div>
-
-  Order:
-  <select ng-model="repoSortOrder">
-    <option value="+name">Name</option>
-    <option value="-stargazers_count">Stars</option>
-    <option value="+language">Language</option>
-  </select>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Stars</th>
-        <th>Language</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <tr ng-repeat="repo in repos | orderBy:repoSortOrder">
-          <td>{{repo.name}}</td>
-          <td>{{repo.stargazers_count | number}}</td>
-          <td>{{repo.language}}</td>
-        </tr>
-    </tbody>
-  </table>
+  <div ng-include="'userdetails.html'" ng-show="user"> </div>
 
 </body>
 

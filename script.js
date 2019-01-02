@@ -46,8 +46,10 @@
       $scope.username = "Angular";
       $scope.message = "Github Viewer";
       $scope.repoSortOrder = "-stargazers_count";
-      $scope.countdown = 5;
+      $scope.countdown = 15;
       startCountdown();
 };
 
       app.controller("MainCtrl", MainCtrl);
+
+    }());
